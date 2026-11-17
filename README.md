@@ -1,60 +1,37 @@
-# Automated Cell Counting and Viability Analysis
+<p align="center"><img src="splash.png" width="520" alt="Cellgorithm"></p>
 
-Python software for microscopy-image-based cell counting and viability analysis, developed at the Nano-Enabled Agriculture & Biosystems Engineering (NABE) Laboratory, Pusan National University.
+# Cellgorithm — Hemocytometer Cell Counting Program
 
-## Overview
+혈구계수판(hemocytometer) 현미경 이미지에서 세포를 자동으로 계수하고, Trypan blue 염색 기반으로 생세포와 사세포를 판별하는 프로그램입니다. 미세조류와 출아 효모 계수도 지원합니다.
 
-This repository contains the research implementation of an automated cell-counting application with a graphical user interface. The source code includes image-processing methods and tools for reviewing counting results.
+An image analysis program that automatically counts cells in hemocytometer images and classifies live/dead cells stained with Trypan blue. Microalgae and budding yeast are also supported.
 
-> **Research software:** Results should be validated against appropriate reference counts before use in scientific analysis. No performance figures are claimed by this repository README.
+## 다운로드 (Download)
 
-## Requirements
+**[Releases](../../releases/latest)** 에서 `Cellgorithm.exe` 를 내려받아 실행하면 됩니다 (Windows, 설치 불필요).
 
-- Python 3.10 or newer is a suggested starting point (other versions have not been verified).
-- A desktop environment supporting Tkinter.
-- The Python packages listed in `requirements.txt`.
+Download `Cellgorithm.exe` from **[Releases](../../releases/latest)** and run it (Windows, no installation needed).
 
-## Installation
+> 처음 실행 시 Windows SmartScreen 경고가 뜨면 "추가 정보 → 실행"을 누르세요.
 
-```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
-cd YOUR_REPOSITORY
-python -m venv .venv
-```
+## 사용 방법 (Usage)
 
-Activate the virtual environment:
+1. 프로그램을 실행합니다.
+2. 계수할 대상(Cells / Microalgae / Yeast)을 선택합니다.
+3. 혈구계수판 이미지를 불러와 분석을 실행합니다.
+4. 사분면별 계수 결과, 생존율, 세포 농도를 확인합니다.
 
-- Windows: `.venv\Scripts\activate`
-- macOS/Linux: `source .venv/bin/activate`
-
-Then install dependencies:
+## 소스 코드로 실행 (Run from source)
 
 ```bash
-python -m pip install -r requirements.txt
+pip install -r requirements.txt
+python Cellgorithm.py
 ```
 
-## Run
+## exe 직접 빌드 (Build the exe)
 
-```bash
-python Cell_Counting_Program_v63.py
-```
+Windows에서 `build.bat` 을 실행하면 `dist/Cellgorithm.exe` 가 만들어집니다.
 
-Open microscopy images in the application and review the generated results. Supported inputs and workflow details should be verified in the running GUI.
+## Contact
 
-## Repository contents
-
-- `Cell_Counting_Program_v63.py`: original application source code
-- `requirements.txt`: third-party Python dependencies inferred from source imports
-- `.gitignore`: files excluded from version control
-
-## Reproducibility notes
-
-The dependency list was derived from source imports; package versions are not pinned because the original development environment has not been confirmed. Installation and execution have not been independently tested. Check any bundled sample data, local paths, or embedded resources before public release.
-
-## Citation
-
-If this repository accompanies a manuscript, add the final bibliographic information and DOI here after publication.
-
-## License
-
-No license is provided at present. Unless a license is explicitly added, the repository should not be interpreted as granting permission to reuse or redistribute the code.
+Nano-Enabled Agriculture and Biosystems Engineering Laboratory, Pusan National University
